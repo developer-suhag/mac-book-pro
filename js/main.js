@@ -1,16 +1,45 @@
 // update price
 function updatePrice(option, price) {
     const previousPrice = document.getElementById(option);
-    // const convetPrePrice = parseFloat(previousPrice.innerText);
     let prices = 0;
-
-    if (price == false) {
+    if (price == 0) {
         previousPrice.innerText = '0';
     } else {
         const updatedPrice = prices + price;
         previousPrice.innerText = updatedPrice;
+
     }
+    totalAmount()
+};
+
+// update total price 
+
+// get prcies
+function getPrice(priceId) {
+
+    const costs = document.getElementById(priceId);
+    const convertCosts = parseFloat(costs.innerText);
+    return convertCosts;
+};
+// update total cost
+function totalAmount() {
+    // total amount
+    const totalAmount = document.getElementById('total-amount');
+    const convertTotalAmount = parseFloat(totalAmount.innerText);
+    // base amount
+    const baseCost = document.getElementById('base-price-total');
+    const convertBasePrice = parseFloat(baseCost.innerText)
+    // extra costs
+    const extraMemoryCost = getPrice('extra-memory-total');
+    const extraStroageCost = getPrice('extra-stroage-total');
+    const deliveryCost = getPrice('delivery-charge-total');
+
+    const totalPrice = convertBasePrice + extraMemoryCost + extraStroageCost + deliveryCost;
+    totalAmount.innerText = totalPrice;
+
 }
+
+
 
 // extra memory cost
 document.getElementById('eight-memory').addEventListener('click', function () {
@@ -37,7 +66,7 @@ document.getElementById('one-tera-ssd').addEventListener('click', function () {
 
 document.getElementById('normal-delivery').addEventListener('click', function () {
     updatePrice('delivery-charge-total', 0)
-})
+});
 document.getElementById('fast-delivery').addEventListener('click', function () {
     updatePrice('delivery-charge-total', 20)
-})
+});
