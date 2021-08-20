@@ -82,17 +82,16 @@ document.getElementById('promo-btn').addEventListener('click', function () {
     // debugger
     const promoField = document.getElementById('promo-field')
     const promoValue = promoField.value;
-
-    // final total
-    const finalAmount = document.getElementById('final-total-price');
-    const convertFinalAmount = parseFloat(finalAmount.innerText)
+    const totalPrice = totalAmount();
     if (promoField.value.toLowerCase() == 'stevekaku') {
-        const totalPrice = totalAmount();
+        // final total
+        const finalAmount = document.getElementById('final-total-price');
+        const convertFinalAmount = parseFloat(finalAmount.innerText)
+        // discount
         const discounted = totalPrice * 0.2;
         const newPrice = totalPrice - discounted;
         // update final total
         finalAmount.innerText = convertFinalAmount - discounted;
-        document.getElementById('promo-btn').setAttribute('disabled', true)
         document.getElementById('promo-failed').style.display = 'none'
     } else {
         document.getElementById('promo-failed').style.display = 'block'
