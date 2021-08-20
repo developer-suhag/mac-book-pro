@@ -92,6 +92,10 @@ document.getElementById('promo-btn').addEventListener('click', function () {
         const newPrice = totalPrice - discounted;
         // update final total
         finalAmount.innerText = convertFinalAmount - discounted;
+        document.getElementById('promo-btn').setAttribute('disabled', true)
+        document.getElementById('promo-failed').style.display = 'none'
+    } else {
+        document.getElementById('promo-failed').style.display = 'block'
     }
 
     promoField.value = '';
