@@ -35,7 +35,12 @@ function totalAmount() {
     const deliveryCost = getPrice('delivery-charge-total');
 
     const totalPrice = convertBasePrice + extraMemoryCost + extraStroageCost + deliveryCost;
-    totalAmount.innerText = totalPrice;
+
+    const finalAmount = document.getElementById('final-total-price')
+    finalAmount.innerText = totalPrice;
+
+
+    return totalAmount.innerText = totalPrice;
 
 }
 
@@ -70,3 +75,24 @@ document.getElementById('normal-delivery').addEventListener('click', function ()
 document.getElementById('fast-delivery').addEventListener('click', function () {
     updatePrice('delivery-charge-total', 20)
 });
+
+// stevekaku special discount
+
+document.getElementById('promo-btn').addEventListener('click', function () {
+    // debugger
+    const promoField = document.getElementById('promo-field')
+    const promoValue = promoField.value;
+
+    // final total
+    const finalAmount = document.getElementById('final-total-price');
+    const convertFinalAmount = parseFloat(finalAmount.innerText)
+    if (promoField.value.toLowerCase() == 'stevekaku') {
+        const totalPrice = totalAmount();
+        const discounted = totalPrice * 0.2;
+        const newPrice = totalPrice - discounted;
+        // update final total
+        finalAmount.innerText = convertFinalAmount - discounted;
+    }
+
+    promoField.value = '';
+})
