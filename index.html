@@ -40,56 +40,62 @@
                             <!-- memory buttons -->
                             <div class="memory mb-5">
                                 <h3 class="mb-3 fw-bold">Memory</h3>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4">8GB unified memory</button>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">16GB unified memroy</button>
+                                <button id="eight-memory" class="btn btn-outline-dark mb-2 me-3 py-2 px-4">8GB unified memory</button>
+                                <button id="sixten-memory" class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">16GB unified memroy</button>
                             </div>
                             <!-- stroage buttons -->
                             <div class="stroage mb-5">
                                 <h3 class="mb-3 fw-bold">Stroage</h3>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">256GB SSD stroage</button>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">512GB SSD stroage</button>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">1TB SSD stroage</button>
+                                <button
+                                    id="two-fiften-six-ssd"
+                                    class="btn btn-outline-dark mb-2 me-3 py-2 px-4"
+                                    ">256GB SSD stroage</button>
+                                <button
+                                    id="five-one-two-ssd"
+                                    class="btn btn-outline-dark mb-2 me-3 py-2 px-4"
+                                    ">512GB SSD stroage</button>
+                                <button id="one-tera-ssd" class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">1TB SSD stroage</button>
                             </div>
                             <!-- delivery buttons -->
                             <div class="delivery mb-5">
                                 <h3 class="mb-3 fw-bold">Choose your delivery option</h3>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">Friday, Aug 25 Free Prime Delivery</button>
-                                <button class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">Friday,Aug 21 Delivery Charge $20</button>
+                                <button id="normal-delivery" class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">Friday, Aug 25 Free Prime Delivery</button>
+                                <button id="fast-delivery" class="btn btn-outline-dark mb-2 me-3 py-2 px-4" ">Friday,Aug 21 Delivery Charge $20</button>
                             </div>
                         </div>
                         <!-- customize price / footer -->
                         <div class="customize-prices">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">Best Price</h5>
+                                    <h5 id="base-price" class="mb-3">Best Price</h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">$<span>1299</span></h5>
+                                    <h5 id="base-price-total" class="mb-3">$<span>1299</span></h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">Extra Memory Cost</h5>
+                                    <h5 id="extra-memory" class="mb-3">Extra Memory Cost</h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">$<span>0</span></h5>
+                                    <h5 id="extra-memory-total" class="mb-3">$<span>0</span></h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">Extra Stroage Cost</h5>
+                                    <h5 id="extra-stroage" class="mb-3">Extra Stroage Cost</h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">$<span>0</span></h5>
+                                    <h5 id="extra-stroage-total" class="mb-3">$<span>0</span></h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">Delivery Charge</h5>
+                                    <h5 id="delivery-charge" class="mb-3">Delivery Charge</h5>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h5 class="mb-3">$<span>0</span></h5>
+                                    <h5 id="delivery-charge-total" class="mb-3">$<span>0</span></h5>
                                 </div>
                                 <div class="row border-top border-dark pt-4">
                                     <div class="col-lg-6">
-                                        <h5 class="mb-3 fw-bold">Total Price</h5>
+                                        <h5 id="total-price" class="mb-3 fw-bold">Total Price</h5>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h5 class="mb-3 fw-bold">$<span>1299</span></h5>
+                                        <h5 id="total-amount" class="mb-3 fw-bold">$<span>1299</span></h5>
                                     </div>
                                 </div>
                             </div>
@@ -101,16 +107,16 @@
                             <input
                                 type="text"
                                 class="form-control w-50 d-inline-block me-4  py-2 px-4"
-                                id=""
+                                id="promo-field"
                                 placeholder="Type your Promo code">
-                            <button class="btn btn-danger  py-2 px-4">Apply</button>
+                            <button id="promo-btn" class="btn btn-danger  py-2 px-4">Apply</button>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="container total-amount py-4 border-top mt-5">
-                <h3 class="text-center fs-1 fw-bold">Total: $<span>1299</span></h3>
+                <h3 class="text-center fs-1 fw-bold">Total: $<span id="final-total-price">1299</span></h3>
             </section>
         </main>
         <script src="js/main.js"></script>
