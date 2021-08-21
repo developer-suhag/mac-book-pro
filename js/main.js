@@ -79,9 +79,9 @@ document.getElementById('fast-delivery').addEventListener('click', function () {
 // stevekaku special discount
 
 document.getElementById('promo-btn').addEventListener('click', function () {
-    // debugger
+    // promo field
     const promoField = document.getElementById('promo-field')
-    const promoValue = promoField.value;
+    // total amount
     const totalPrice = totalAmount();
     if (promoField.value.toLowerCase() == 'stevekaku') {
         // final total
@@ -89,11 +89,11 @@ document.getElementById('promo-btn').addEventListener('click', function () {
         const convertFinalAmount = parseFloat(finalAmount.innerText)
         // discount
         const discounted = totalPrice * 0.2;
-        const newPrice = totalPrice - discounted;
         // update final total
         finalAmount.innerText = convertFinalAmount - discounted;
         document.getElementById('promo-failed').style.display = 'none'
     } else {
+        // false promo code warning
         document.getElementById('promo-failed').style.display = 'block'
     }
 
